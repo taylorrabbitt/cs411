@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import LocationForm from "./components/LocationForm";
 import Results from "./components/Results";
-
+import Facebook from './components/Facebook';
 import useData from './hooks/useData';
 
 function App() {
@@ -17,6 +17,8 @@ function App() {
       <header>Virus Tracker App</header>
       <LocationForm callback={q => setSearchQuery(q)} />
       <Results data={results} message={message}/>
+      <header>Facebook Authentication</header>
+      <Facebook />
     </div>
   );
 }
